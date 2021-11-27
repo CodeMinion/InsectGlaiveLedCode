@@ -10,7 +10,7 @@
 #include "Pattern_ELEMENT_ICE.h"
 #include "Pattern_ELEMENT_DRAGON.h"
 
-#define LED_PIN    7
+#define LED_PIN    30
 #define LED_COUNT 8
 
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
@@ -40,7 +40,7 @@ const char* DEVICE_MANUFACTURER = "Rounin Labs";
 
 const int UUID16_SVC_PROP = 0x5300;
 const int UUID16_CHR_PROP_PATTERN = 0x5A38;
-char * SERVICE_DESCRIPTION = "LED Pattern [0-2]";
+char * SERVICE_DESCRIPTION = "LED Pattern [0-6]";
 
 void connect_callback(uint16_t conn_handle);
 void disconnect_callback(uint16_t conn_handle, uint8_t reason);
@@ -125,6 +125,8 @@ void characteristic_write_callback(uint16_t conn_hdl, BLECharacteristic* chr, ui
       } 
       else if (pattern == 1)
       {
+        DEBUG_PRINTLN("Fired!");
+    
         activatePattern(pattern_element_fire);
       }
       else if (pattern == 2)
@@ -139,7 +141,7 @@ void characteristic_write_callback(uint16_t conn_hdl, BLECharacteristic* chr, ui
       {
         activatePattern(pattern_element_ice);
       }
-      else if (pattern == 4)
+      else if (pattern == 5)
       {
         activatePattern(pattern_element_dragon);
       }
