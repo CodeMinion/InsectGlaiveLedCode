@@ -25,12 +25,16 @@ namespace NS_ELEMENT_FIRE {
 	0xbf0000, 0xbf0000, 0xbf0000, 0xbf0000, 0xbf0000, 0xbf0000, 0xbf0000, 0xbf0000
 	};
 
+	const uint32_t BACKGROUND[] PROGMEM = { 
+	0x7f0000, 0x7f0000, 0x7f0000, 0x7f0000, 0x7f0000, 0x7f0000, 0x7f0000, 0x7f0000
+	};
+
 	const uint32_t BACKGROUND_COPY_3[] PROGMEM = { 
 	0x3f0000, 0x3f0000, 0x3f0000, 0x3f0000, 0x3f0000, 0x3f0000, 0x3f0000, 0x3f0000
 	};
 
-	const uint32_t LAYER[] PROGMEM = { 
-	0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000
+	const uint32_t BACKGROUND_COPY_6[] PROGMEM = { 
+	0x260000, 0x260000, 0x260000, 0x260000, 0x260000, 0x260000, 0x260000, 0x260000
 	};
 
 	const uint32_t BACKGROUND_COPY_4[] PROGMEM = { 
@@ -48,14 +52,16 @@ namespace NS_ELEMENT_FIRE {
 	const uint32_t *const ELEMENT_FIRE[] PROGMEM = { 
 	BACKGROUND_COPY,
 	BACKGROUND_COPY_5,
+	BACKGROUND,
 	BACKGROUND_COPY_3,
-	LAYER,
+	BACKGROUND_COPY_6,
 	BACKGROUND_COPY_4,
 	BACKGROUND_COPY_2,
 	BACKGROUND_COPY_1,
 	};
 
 	const uint32_t ELEMENT_FIRE_SIZES[] PROGMEM = { 
+	8,
 	8,
 	8,
 	8,
@@ -95,7 +101,9 @@ class Pattern_ELEMENT_FIRE : public GimpLedPattern
             mInterrupt = false;
             return;
           }
-          uint32_t ledColor = pgm_read_dword(&(ELEMENT_FIRE[framePos][ledPos]));
+		  uint32_t * frameAddress = (uint32_t *)pgm_read_dword(&(ELEMENT_FIRE[framePos]));
+		  uint32_t ledColor = pgm_read_dword(&(frameAddress[ledPos]));
+		  
           int blue = ledColor & 0x00FF;
           int green = (ledColor >> 8) & 0x00FF;
           int red = (ledColor >>  16) & 0x00FF;
