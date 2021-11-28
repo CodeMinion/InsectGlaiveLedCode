@@ -40,7 +40,7 @@ const char* DEVICE_MANUFACTURER = "Rounin Labs";
 
 const int UUID16_SVC_PROP = 0x5300;
 const int UUID16_CHR_PROP_PATTERN = 0x5A38;
-char * SERVICE_DESCRIPTION = "LED Pattern [0-6]";
+char * SERVICE_DESCRIPTION = "LED Pattern [0-5]";
 
 void connect_callback(uint16_t conn_handle);
 void disconnect_callback(uint16_t conn_handle, uint8_t reason);
@@ -80,7 +80,7 @@ void setup() {
   int propServiceCount = sizeof(propServices)/sizeof(BlePropService);
   propHelper.setup(propServices, propServiceCount);
   
-  strip.setBrightness(40);
+  strip.setBrightness(255);
   strip.begin();
   strip.show(); // Initialize all pixels to 'off'
   
