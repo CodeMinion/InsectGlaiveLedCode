@@ -17,25 +17,55 @@
 
 namespace NS_ELEMENT_THUNDER {
 
+	const uint32_t BACKGROUND_COPY_7[] PROGMEM = { 
+	0xffe600, 0xffe600, 0xffe600, 0xffe600, 0xffe600, 0xffe600, 0xffe600, 0xffe600
+	};
+
+	const uint32_t BACKGROUND_COPY_6[] PROGMEM = { 
+	0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00
+	};
+
+	const uint32_t BACKGROUND_COPY_5[] PROGMEM = { 
+	0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200
+	};
+
+	const uint32_t BACKGROUND_COPY_4[] PROGMEM = { 
+	0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800
+	};
+
+	const uint32_t BACKGROUND_COPY_3[] PROGMEM = { 
+	0x262200, 0x262200, 0x262200, 0x262200, 0x262200, 0x262200, 0x262200, 0x262200
+	};
+
+	const uint32_t BACKGROUND_COPY_2[] PROGMEM = { 
+	0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800, 0x3f3800
+	};
+
+	const uint32_t BACKGROUND_COPY_1[] PROGMEM = { 
+	0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200, 0x7f7200
+	};
+
 	const uint32_t BACKGROUND_COPY[] PROGMEM = { 
-	0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559
-	};
-
-	const uint32_t BACKGROUND[] PROGMEM = { 
-	0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559, 0xffe559
-	};
-
-	const uint32_t LAYER[] PROGMEM = { 
-	0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000
+	0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00, 0xbfac00
 	};
 
 	const uint32_t *const ELEMENT_THUNDER[] PROGMEM = { 
+	BACKGROUND_COPY_7,
+	BACKGROUND_COPY_6,
+	BACKGROUND_COPY_5,
+	BACKGROUND_COPY_4,
+	BACKGROUND_COPY_3,
+	BACKGROUND_COPY_2,
+	BACKGROUND_COPY_1,
 	BACKGROUND_COPY,
-	BACKGROUND,
-	LAYER,
 	};
 
 	const uint32_t ELEMENT_THUNDER_SIZES[] PROGMEM = { 
+	8,
+	8,
+	8,
+	8,
+	8,
 	8,
 	8,
 	8,

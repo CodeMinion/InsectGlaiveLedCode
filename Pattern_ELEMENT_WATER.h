@@ -21,21 +21,51 @@ namespace NS_ELEMENT_WATER {
 	0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb
 	};
 
-	const uint32_t BACKGROUND[] PROGMEM = { 
-	0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb, 0x006cfb
+	const uint32_t BACKGROUND_COPY_6[] PROGMEM = { 
+	0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc
 	};
 
-	const uint32_t LAYER[] PROGMEM = { 
-	0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0x000000
+	const uint32_t BACKGROUND_COPY_5[] PROGMEM = { 
+	0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d
+	};
+
+	const uint32_t BACKGROUND_COPY_4[] PROGMEM = { 
+	0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e
+	};
+
+	const uint32_t BACKGROUND_COPY_3[] PROGMEM = { 
+	0x001025, 0x001025, 0x001025, 0x001025, 0x001025, 0x001025, 0x001025, 0x001025
+	};
+
+	const uint32_t BACKGROUND_COPY_2[] PROGMEM = { 
+	0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e, 0x001a3e
+	};
+
+	const uint32_t BACKGROUND_COPY_1[] PROGMEM = { 
+	0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d, 0x00357d
+	};
+
+	const uint32_t BACKGROUND[] PROGMEM = { 
+	0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc, 0x0050bc
 	};
 
 	const uint32_t *const ELEMENT_WATER[] PROGMEM = { 
 	BACKGROUND_COPY,
+	BACKGROUND_COPY_6,
+	BACKGROUND_COPY_5,
+	BACKGROUND_COPY_4,
+	BACKGROUND_COPY_3,
+	BACKGROUND_COPY_2,
+	BACKGROUND_COPY_1,
 	BACKGROUND,
-	LAYER,
 	};
 
 	const uint32_t ELEMENT_WATER_SIZES[] PROGMEM = { 
+	8,
+	8,
+	8,
+	8,
+	8,
 	8,
 	8,
 	8,
